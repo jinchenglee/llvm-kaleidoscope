@@ -2,6 +2,9 @@
 cmake_minimum_required(VERSION 3.4.3)
 project(Kaleiscope)
 
+set(CMAKE_CXX_STANDARD 17)
+add_compile_options(-std=c++17)
+
 find_package(LLVM REQUIRED CONFIG)
 
 # Set gdb
