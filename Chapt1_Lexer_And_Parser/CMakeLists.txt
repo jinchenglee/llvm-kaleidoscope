@@ -3,6 +3,8 @@ project(Kaleiscope)
 
 find_package(LLVM REQUIRED CONFIG)
 
+set(CMAKE_CXX_STANDARD 17)
+
 # Set gdb
 SET(CMAKE_BUILD_TYPE "Debug")
 SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")
@@ -15,7 +17,7 @@ message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
 # you will need to enable C++11 support
 # for your compiler.
 
-add_compile_options(-std=c++11)
+add_compile_options(-std=c++17)
 
 #include_directories("libs")
 add_definitions(${LLVM_DEFINITIONS})
